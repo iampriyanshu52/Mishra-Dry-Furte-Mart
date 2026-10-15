@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Checkout | Mishra Dry Fruit Mart</title>
+
+    <meta
+        name="description"
+        content="Complete your Mishra Dry Fruit Mart order securely."
+    >
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Checkout CSS -->
+    <link rel="stylesheet" href="css/checkout.css">
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="top-offer-bar">
+
+    <div class="container">
+
+        <div class="top-offer-content">
+
+            <span>
+                <i class="fas fa-shield-alt"></i>
+                Secure Checkout
+            </span>
+
+            <span>
+                <i class="fas fa-truck"></i>
+                Free Delivery Above ₹499
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top main-navbar">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand"
+            href="index.html"
+        >
+
+            <span class="brand-icon">
+                <i class="fas fa-seedling"></i>
+            </span>
+
+            <span class="brand-text">
+                Dry Fruit <span>Mart</span>
+            </span>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+        >
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="shop.html"
+                    >
+                        Shop
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="about.html"
+                    >
+                        About Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="navbar-actions">
+
+                <a
+                    href="wishlist.html"
+                    class="nav-action-btn position-relative"
+                >
+
+                    <i class="far fa-heart"></i>
+
+                    <span
+                        id="wishlistCount"
+                        class="nav-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="cart.html"
+                    class="nav-action-btn position-relative"
+                >
+
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span
+                        id="cartCount"
+                        class="nav-count"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     CHECKOUT HERO
+========================================================= -->
+
+<section class="checkout-hero">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <span class="section-subtitle">
+                SECURE CHECKOUT
+            </span>
+
+            <h1>
+                Complete Your Order
+            </h1>
+
+            <p>
+                Just a few details and your dry fruits
+                will be on their way.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CHECKOUT SECTION
+========================================================= -->
+
+<section class="checkout-section section-padding">
+
+    <div class="container">
+
+        <div
+            id="checkoutEmpty"
+            class="checkout-empty"
+            style="display:none;"
+        >
+
+            <i class="fas fa-shopping-cart"></i>
+
+            <h3>
+                Your Cart is Empty
+            </h3>
+
+            <p>
+                Please add products to your cart before checkout.
+            </p>
+
+            <a
+                href="shop.html"
+                class="btn btn-success"
+            >
+                Start Shopping
+            </a>
+
+        </div>
+
+
+        <div
+            id="checkoutContent"
+            class="row g-4"
+        >
+
+            <!-- =================================================
+                 CUSTOMER FORM
+            ================================================= -->
+
+            <div class="col-lg-7">
+
+                <form
+                    id="checkoutForm"
+                    novalidate
+                >
+
+                    <!-- CUSTOMER INFORMATION -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-title">
+
+                            <div class="checkout-step">
+                                1
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Customer Information
+                                </h4>
+
+                                <p>
+                                    Enter your contact details
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="firstName"
+                                    class="form-label"
+                                >
+                                    First Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    class="form-control"
+                                    placeholder="Enter first name"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter your first name.
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="lastName"
+                                    class="form-label"
+                                >
+                                    Last Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    class="form-control"
+                                    placeholder="Enter last name"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter your last name.
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="email"
+                                    class="form-label"
+                                >
+                                    Email Address *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="you@example.com"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid email.
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label
+                                    for="phone"
+                                    class="form-label"
+                                >
+                                    Mobile Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="form-control"
+                                    placeholder="10 digit mobile number"
+                                    maxlength="10"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid 10 digit mobile number.
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ADDRESS
+                    ================================================= -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-title">
+
+                            <div class="checkout-step">
+                                2
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Delivery Address
+                                </h4>
+
+                                <p>
+                                    Where should we deliver your order?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="row g-3">
+
+                            <div class="col-12">
+
+                                <label
+                                    for="address"
+                                    class="form-label"
+                                >
+                                    Full Address *
+                                </label>
+
+                                <textarea
+                                    id="address"
+                                    class="form-control"
+                                    rows="3"
+                                    placeholder="House/Flat No., Street, Area"
+                                    required
+                                ></textarea>
+
+                                <div class="invalid-feedback">
+                                    Please enter your address.
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <label
+                                    for="city"
+                                    class="form-label"
+                                >
+                                    City *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="city"
+                                    class="form-control"
+                                    placeholder="City"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter your city.
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <label
+                                    for="state"
+                                    class="form-label"
+                                >
+                                    State *
+                                </label>
+
+                                <select
+                                    id="state"
+                                    class="form-select"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select State
+                                    </option>
+
+                                    <option>
+                                        Punjab
+                                    </option>
+
+                                    <option>
+                                        Haryana
+                                    </option>
+
+                                    <option>
+                                        Himachal Pradesh
+                                    </option>
+
+                                    <option>
+                                        Delhi
+                                    </option>
+
+                                    <option>
+                                        Uttar Pradesh
+                                    </option>
+
+                                    <option>
+                                        Rajasthan
+                                    </option>
+
+                                    <option>
+                                        Maharashtra
+                                    </option>
+
+                                    <option>
+                                        Gujarat
+                                    </option>
+
+                                    <option>
+                                        Madhya Pradesh
+                                    </option>
+
+                                    <option>
+                                        Bihar
+                                    </option>
+
+                                    <option>
+                                        West Bengal
+                                    </option>
+
+                                    <option>
+                                        Karnataka
+                                    </option>
+
+                                    <option>
+                                        Tamil Nadu
+                                    </option>
+
+                                    <option>
+                                        Telangana
+                                    </option>
+
+                                    <option>
+                                        Kerala
+                                    </option>
+
+                                    <option>
+                                        Odisha
+                                    </option>
+
+                                    <option>
+                                        Assam
+                                    </option>
+
+                                    <option>
+                                        Jammu and Kashmir
+                                    </option>
+
+                                    <option>
+                                        Uttarakhand
+                                    </option>
+
+                                    <option>
+                                        Jharkhand
+                                    </option>
+
+                                    <option>
+                                        Chhattisgarh
+                                    </option>
+
+                                    <option>
+                                        Goa
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                </select>
+
+                                <div class="invalid-feedback">
+                                    Please select your state.
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-md-4">
+
+                                <label
+                                    for="pincode"
+                                    class="form-label"
+                                >
+                                    PIN Code *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="pincode"
+                                    class="form-control"
+                                    placeholder="6 digit PIN"
+                                    maxlength="6"
+                                    required
+                                >
+
+                                <div class="invalid-feedback">
+                                    Please enter a valid 6 digit PIN.
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <label
+                                    class="form-label"
+                                >
+                                    Address Type
+                                </label>
+
+                                <div class="address-type-options">
+
+                                    <label class="address-type">
+
+                                        <input
+                                            type="radio"
+                                            name="addressType"
+                                            value="Home"
+                                            checked
+                                        >
+
+                                        <span>
+                                            <i class="fas fa-home"></i>
+                                            Home
+                                        </span>
+
+                                    </label>
+
+
+                                    <label class="address-type">
+
+                                        <input
+                                            type="radio"
+                                            name="addressType"
+                                            value="Work"
+                                        >
+
+                                        <span>
+                                            <i class="fas fa-briefcase"></i>
+                                            Work
+                                        </span>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         PAYMENT
+                    ================================================= -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-title">
+
+                            <div class="checkout-step">
+                                3
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Payment Method
+                                </h4>
+
+                                <p>
+                                    Choose your preferred payment method
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-options">
+
+
+                            <!-- COD -->
+
+                            <label
+                                class="payment-option active"
+                                data-payment="cod"
+                            >
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="cod"
+                                    checked
+                                >
+
+                                <div class="payment-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+
+                                <div class="payment-info">
+
+                                    <strong>
+                                        Cash on Delivery
+                                    </strong>
+
+                                    <small>
+                                        Pay when your order arrives.
+                                    </small>
+
+                                </div>
+
+                                <i class="fas fa-check-circle payment-check"></i>
+
+                            </label>
+
+
+                            <!-- ONLINE -->
+
+                            <label
+                                class="payment-option"
+                                data-payment="online"
+                            >
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="online"
+                                >
+
+                                <div class="payment-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+
+                                <div class="payment-info">
+
+                                    <strong>
+                                        Online Payment
+                                    </strong>
+
+                                    <small>
+                                        UPI, Card, Net Banking and more.
+                                    </small>
+
+                                </div>
+
+                                <i class="fas fa-check-circle payment-check"></i>
+
+                            </label>
+
+                        </div>
+
+
+                        <div
+                            id="onlinePaymentNotice"
+                            class="online-payment-notice"
+                            style="display:none;"
+                        >
+
+                            <i class="fas fa-info-circle"></i>
+
+                            <div>
+
+                                <strong>
+                                    Online Payment
+                                </strong>
+
+                                <p>
+                                    Payment gateway integration will
+                                    be connected in the final backend
+                                    version. For now you can continue
+                                    with Cash on Delivery.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ORDER NOTES
+                    ================================================= -->
+
+                    <div class="checkout-card">
+
+                        <div class="checkout-card-title">
+
+                            <div class="checkout-step">
+                                4
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Additional Information
+                                </h4>
+
+                                <p>
+                                    Optional order instructions
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <label
+                            for="orderNotes"
+                            class="form-label"
+                        >
+                            Order Notes
+                        </label>
+
+                        <textarea
+                            id="orderNotes"
+                            class="form-control"
+                            rows="3"
+                            placeholder="Any special delivery instructions?"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- TERMS -->
+
+                    <div class="terms-box">
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="terms"
+                                required
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="terms"
+                            >
+                                I agree to the
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                                and
+                                <a href="#">
+                                    Privacy Policy
+                                </a>.
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PLACE ORDER -->
+
+                    <button
+                        type="submit"
+                        id="placeOrderBtn"
+                        class="btn btn-success place-order-btn"
+                    >
+
+                        <span>
+                            <i class="fas fa-lock me-2"></i>
+                            Place Order
+                        </span>
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+            <!-- =================================================
+                 ORDER SUMMARY
+            ================================================= -->
+
+            <div class="col-lg-5">
+
+                <div class="checkout-summary">
+
+                    <div class="checkout-summary-header">
+
+                        <h4>
+                            Order Summary
+                        </h4>
+
+                        <a
+                            href="cart.html"
+                            class="edit-cart-link"
+                        >
+                            <i class="fas fa-edit"></i>
+                            Edit Cart
+                        </a>
+
+                    </div>
+
+
+                    <!-- PRODUCTS -->
+
+                    <div
+                        id="checkoutItems"
+                        class="checkout-items"
+                    >
+                    </div>
+
+
+                    <!-- PRICE DETAILS -->
+
+                    <div class="checkout-price-details">
+
+                        <div class="checkout-price-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="checkoutSubtotal">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="checkout-price-row"
+                            id="checkoutDiscountRow"
+                            style="display:none;"
+                        >
+
+                            <span>
+                                Discount
+                            </span>
+
+                            <strong
+                                id="checkoutDiscount"
+                                class="text-success"
+                            >
+                                -₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="checkout-price-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <strong id="checkoutDelivery">
+                                FREE
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TOTAL -->
+
+                    <div class="checkout-total-row">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="checkoutTotal">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+
+                    <!-- SAVING -->
+
+                    <div
+                        id="checkoutSaving"
+                        class="checkout-saving"
+                    >
+
+                        <i class="fas fa-tag"></i>
+
+                        <span>
+                            You're saving ₹0 on this order
+                        </span>
+
+                    </div>
+
+
+                    <!-- SECURITY -->
+
+                    <div class="checkout-security">
+
+                        <div>
+
+                            <i class="fas fa-lock"></i>
+
+                            <span>
+                                Secure Checkout
+                            </span>
+
+                        </div>
+
+                        <div>
+
+                            <i class="fas fa-shield-alt"></i>
+
+                            <span>
+                                Safe & Protected
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HELP BOX -->
+
+                <div class="checkout-help">
+
+                    <i class="fas fa-headset"></i>
+
+                    <div>
+
+                        <strong>
+                            Need Help?
+                        </strong>
+
+                        <p>
+                            Contact our support team for
+                            assistance with your order.
+                        </p>
+
+                        <a href="contact.html">
+                            Contact Support
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ORDER SUCCESS MODAL
+========================================================= -->
+
+<div
+    class="modal fade"
+    id="orderSuccessModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content order-success-modal">
+
+            <div class="modal-body text-center">
+
+                <div class="success-icon">
+
+                    <i class="fas fa-check"></i>
+
+                </div>
+
+                <h3>
+                    Order Placed Successfully!
+                </h3>
+
+                <p>
+                    Thank you for shopping with
+                    <strong>Mishra Dry Fruit Mart</strong>.
+                </p>
+
+                <div class="order-number-box">
+
+                    <span>
+                        Order Number
+                    </span>
+
+                    <strong id="successOrderNumber">
+                        DFM000000
+                    </strong>
+
+                </div>
+
+                <p class="success-note">
+                    Your order details have been saved.
+                </p>
+
+                <div class="d-flex gap-2 justify-content-center">
+
+                    <a
+                        href="orders.html"
+                        class="btn btn-success"
+                    >
+                        View Orders
+                    </a>
+
+                    <a
+                        href="shop.html"
+                        class="btn btn-outline-success"
+                    >
+                        Continue Shopping
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    id="toast"
+    class="toast"
+    role="alert"
+>
+
+    <div class="toast-content">
+
+        <i
+            id="toastIcon"
+            class="fas fa-check-circle"
+        ></i>
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/api.js"></script>
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

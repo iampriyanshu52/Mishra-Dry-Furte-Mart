@@ -1,0 +1,533 @@
+/* =========================================================
+   MISHRA DRY FRUIT MART - AUTH CSS
+   File: frontend/css/auth.css
+   ========================================================= */
+
+
+/* =========================================================
+   AUTH SECTION
+   ========================================================= */
+
+.auth-section {
+    min-height: calc(100vh - 150px);
+    padding: 70px 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(248, 250, 247, 0.98),
+            rgba(240, 248, 243, 0.98)
+        );
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   AUTH CARD
+   ========================================================= */
+
+.auth-card {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 40px;
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eeeeee;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        #198754,
+        #63b77d
+    );
+}
+
+
+/* =========================================================
+   AUTH ICON
+   ========================================================= */
+
+.auth-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #eaf7ef;
+    color: #198754;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+.auth-icon i {
+    line-height: 1;
+}
+
+
+/* =========================================================
+   AUTH HEADING
+   ========================================================= */
+
+.auth-heading {
+    margin-bottom: 30px;
+}
+
+.auth-heading h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.auth-heading p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.auth-form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   INPUT WITH ICON
+   ========================================================= */
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon > i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b8b8b;
+    z-index: 2;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.input-icon .form-control {
+    height: 50px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #333333;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.input-icon .form-control::placeholder {
+    color: #aaaaaa;
+}
+
+.input-icon .form-control:focus {
+    border-color: #198754;
+    box-shadow:
+        0 0 0 0.2rem rgba(25, 135, 84, 0.10);
+}
+
+
+/* =========================================================
+   PASSWORD TOGGLE
+   ========================================================= */
+
+.password-input .form-control {
+    padding-right: 48px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: #888888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    z-index: 3;
+}
+
+.password-toggle:hover {
+    color: #198754;
+}
+
+.password-toggle:focus {
+    outline: none;
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD
+   ========================================================= */
+
+.forgot-password {
+    font-size: 12px;
+    color: #198754;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.forgot-password:hover {
+    color: #146c43;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   REMEMBER ME
+   ========================================================= */
+
+.auth-options {
+    margin-bottom: 22px;
+}
+
+.remember-me {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin: 0 !important;
+    color: #666666 !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+}
+
+.remember-me input {
+    width: 16px;
+    height: 16px;
+    accent-color: #198754;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.auth-submit-btn {
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: #198754;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.auth-submit-btn:hover {
+    background: #157347;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow:
+        0 8px 20px rgba(25, 135, 84, 0.20);
+}
+
+.auth-submit-btn:active {
+    transform: translateY(0);
+}
+
+.auth-submit-btn:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 28px 0;
+    color: #aaaaaa;
+    font-size: 12px;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eeeeee;
+}
+
+.auth-divider span {
+    min-width: 30px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   REGISTER AREA
+   ========================================================= */
+
+.auth-register p {
+    color: #777777;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.register-link {
+    color: #198754;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.register-link:hover {
+    color: #146c43;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   VALIDATION
+   ========================================================= */
+
+.auth-form-group .invalid-feedback {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.auth-form-group .form-control.is-invalid {
+    border-color: #dc3545;
+    background-image: none;
+}
+
+.auth-form-group .form-control.is-invalid:focus {
+    border-color: #dc3545;
+    box-shadow:
+        0 0 0 0.2rem rgba(220, 53, 69, 0.10);
+}
+
+.auth-form-group .form-control.is-valid {
+    border-color: #198754;
+    background-image: none;
+}
+
+
+/* =========================================================
+   AUTH MESSAGE
+   ========================================================= */
+
+.auth-message {
+    padding: 12px 15px;
+    border-radius: 9px;
+    font-size: 13px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.auth-message.show {
+    display: block;
+}
+
+.auth-message.success {
+    color: #0f5132;
+    background: #d1e7dd;
+    border: 1px solid #badbcc;
+}
+
+.auth-message.error {
+    color: #842029;
+    background: #f8d7da;
+    border: 1px solid #f5c2c7;
+}
+
+.auth-message.warning {
+    color: #664d03;
+    background: #fff3cd;
+    border: 1px solid #ffecb5;
+}
+
+
+/* =========================================================
+   LOGGED IN USER DROPDOWN
+   ========================================================= */
+
+.user-account-btn {
+    border: none;
+    background: transparent;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.user-account-btn:hover {
+    color: #198754;
+}
+
+.user-account-name {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.user-account-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #eaf7ef;
+    color: #198754;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================================
+   FORGOT PASSWORD MODAL
+   ========================================================= */
+
+.auth-modal .modal-content {
+    border: none;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.auth-modal .modal-header {
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 25px;
+}
+
+.auth-modal .modal-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.auth-modal .modal-body {
+    padding: 25px;
+}
+
+.auth-modal .modal-footer {
+    border-top: 1px solid #eeeeee;
+    padding: 15px 25px;
+}
+
+.auth-modal-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eaf7ef;
+    color: #198754;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .auth-section {
+        padding: 45px 15px;
+    }
+
+    .auth-card {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .auth-heading h2 {
+        font-size: 25px;
+    }
+
+    .auth-heading p {
+        font-size: 13px;
+    }
+
+    .auth-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 24px;
+    }
+
+    .auth-form-group {
+        margin-bottom: 18px;
+    }
+
+    .input-icon .form-control {
+        height: 48px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .auth-section {
+        padding: 30px 10px;
+    }
+
+    .auth-card {
+        padding: 25px 17px;
+    }
+
+    .auth-heading h2 {
+        font-size: 22px;
+    }
+
+    .auth-options {
+        margin-bottom: 18px;
+    }
+
+    .forgot-password {
+        font-size: 11px;
+    }
+
+}

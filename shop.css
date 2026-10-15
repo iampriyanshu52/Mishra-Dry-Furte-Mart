@@ -1,0 +1,378 @@
+/* =====================================================
+   MISHRA DRY FRUIT MART
+   SHOP PAGE CSS
+===================================================== */
+
+.shop-hero {
+    padding: 80px 0;
+    background: linear-gradient(
+        135deg,
+        #f4f9f3,
+        #fff
+    );
+}
+
+.shop-small-title {
+    color: #198754;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.shop-hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.shop-hero h1 span {
+    color: #198754;
+}
+
+.shop-hero p {
+    max-width: 650px;
+    color: #777;
+    font-size: 17px;
+}
+
+.breadcrumb-shop {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.breadcrumb-shop a {
+    color: #198754;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.breadcrumb-shop i {
+    color: #999;
+}
+
+
+/* =====================================================
+   SHOP SECTION
+===================================================== */
+
+.shop-section {
+    padding: 70px 0;
+    background: #fff;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.shop-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+.filter-box {
+    border: 1px solid #e9e9e9;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.filter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.filter-heading h4 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.filter-heading i {
+    color: #198754;
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.category-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.category-option input {
+    accent-color: #198754;
+}
+
+.category-option span {
+    flex: 1;
+    font-size: 14px;
+}
+
+.category-option small {
+    color: #888;
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price-values {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#priceRange {
+    width: 100%;
+    accent-color: #198754;
+}
+
+.filter-apply-btn {
+    width: 100%;
+    margin-top: 18px;
+    background: #198754;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.filter-apply-btn:hover {
+    background: #146c43;
+    color: #fff;
+}
+
+
+/* =====================================================
+   RATING
+===================================================== */
+
+.rating-filter label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.rating-filter input {
+    accent-color: #198754;
+}
+
+.rating-stars {
+    color: #f5a623;
+    letter-spacing: 2px;
+}
+
+.rating-filter small {
+    color: #777;
+}
+
+
+/* =====================================================
+   CLEAR FILTER
+===================================================== */
+
+.clear-filter-btn {
+    width: 100%;
+    border: 1px solid #198754;
+    color: #198754;
+    background: #fff;
+    padding: 11px;
+    border-radius: 8px;
+}
+
+.clear-filter-btn:hover {
+    background: #198754;
+    color: #fff;
+}
+
+
+/* =====================================================
+   SHOP TOOLBAR
+===================================================== */
+
+.shop-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.shop-results-title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.shop-results-count {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.shop-sort {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shop-sort label {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #555;
+}
+
+.shop-sort select {
+    min-width: 190px;
+    border-radius: 8px;
+}
+
+
+/* =====================================================
+   SHOP PRODUCT CARD
+===================================================== */
+
+#shopProducts .product-card {
+    height: 100%;
+}
+
+#shopProducts .product-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.shop-empty {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.shop-empty i {
+    font-size: 60px;
+    color: #198754;
+    margin-bottom: 20px;
+}
+
+.shop-empty h3 {
+    font-weight: 700;
+}
+
+.shop-empty p {
+    color: #777;
+}
+
+.shop-empty button {
+    background: #198754;
+    color: #fff;
+    padding: 10px 25px;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.shop-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 40px;
+}
+
+.shop-page-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.shop-page-btn:hover,
+.shop-page-btn.active {
+    background: #198754;
+    color: #fff;
+    border-color: #198754;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .shop-sidebar {
+        position: static;
+    }
+
+    .shop-hero h1 {
+        font-size: 38px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .shop-hero {
+        padding: 55px 0;
+    }
+
+    .shop-hero h1 {
+        font-size: 32px;
+    }
+
+    .shop-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shop-sort {
+        width: 100%;
+    }
+
+    .shop-sort select {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .shop-hero h1 {
+        font-size: 27px;
+    }
+
+    .shop-section {
+        padding: 45px 0;
+    }
+
+    .filter-box {
+        padding: 18px;
+    }
+
+}

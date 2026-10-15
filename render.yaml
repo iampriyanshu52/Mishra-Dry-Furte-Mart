@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: mishra-dry-fruit-mart
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: RAZORPAY_KEY_ID
+        value: rzp_test_MishraDryFruit
+      - key: RAZORPAY_KEY_SECRET
+        value: mishra_secret_key_2026
+      - key: JWT_SECRET
+        value: mishra_dry_fruit_mart_jwt_secret_key_2026

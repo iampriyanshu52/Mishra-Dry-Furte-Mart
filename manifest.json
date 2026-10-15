@@ -1,0 +1,21 @@
+{
+  "short_name": "Mishra DryFruit",
+  "name": "Mishra Dry Fruit Mart",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1508061253366-f7da158b6d5a?auto=format&fit=crop&w=192&q=80",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1508061253366-f7da158b6d5a?auto=format&fit=crop&w=512&q=80",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#ffffff",
+  "theme_color": "#198754",
+  "display": "standalone",
+  "orientation": "portrait"
+}
